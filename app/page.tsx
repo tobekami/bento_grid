@@ -2,100 +2,130 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="w-full h-screen py-11 px-4 md:px-28 flex justify-center items-center">
+      {/* For screens larger than lg, show the grid. Otherwise, show the heading */}
+      <div className="lg:hidden w-full h-full flex justify-center items-center">
+        <h1 className="text-center text-2xl md:text-4xl font-bold text-gray-800">
+          Made a mistake not making mobile first with tailwind, may come back to this.
+        </h1>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <div className="hidden lg:grid w-[70%] h-full grid-cols-4 grid-rows-10 gap-6">
+        <div className="w-full h-full grid grid-cols-1 grid-rows-2 col-span-1 row-span-10 gap-6">
+          <div className="bg-[#FAEEE2] pt-8 px-4 font-medium text-2xl col-span-1 row-span-1 rounded-md leading-[1.35rem]">
+            <p>
+              Create and schedule content{" "}
+              <span className="italic text-[#694AB1]">quicker.</span>
+            </p>
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              className="m-auto mt-4"
+              src="/images/image1.webp"
+              alt="image1"
+              width={120}
+              height={100}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <div className="bg-[#FFCC69] col-span-1 row-span-1 rounded-md pt-4 px-4 font-medium text-2xl leading-[1.35rem]">
+            <p>Write your content </p>
+            <span> using AI.</span>
+            <Image
+              className="m-auto mt-4 scale-100"
+              src="/images/image2.webp"
+              alt="image2"
+              width={150}
+              height={100}
+            />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        <div className="bg-[#7651DC] col-span-2 row-span-4 rounded-md text-4xl text-white pt-7 px-4 font-[500] leading-8 tracking-normal text-center">
+          <p>
+            Social Media <span className="text-[#FFCC69]">10X</span>{" "}
+            <span className="italic">Faster</span> with AI
+          </p>
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            className="m-auto mt-5"
+            src="/images/image3.webp"
+            alt="image3"
+            width={100}
+            height={100}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <p className="text-[0.65rem] tracking-tight leading-3 font-[300] mt-2">
+            Over 4,000 5-star reviews
+          </p>
+        </div>
+        <div className="bg-[#DCD1FC] col-span-1 row-span-7 rounded-md text-md font-[550] tracking-[-1px] leading-4 pt-8 px-5 overflow-hidden relative">
+          <p>
+            Schedule to <span className="block">social media.</span>
+          </p>
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            className="m-auto my-4 scale-125 absolute left-[24%] top-[22%]"
+            src="/images/image4.webp"
+            alt="image4"
+            width={200}
+            height={150}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <p className="text-[0.65rem] tracking-tight leading-3 font-[550] absolute top-[78%]">
+            <span className="block">Optimize post timings</span>
+            <span className="block">to publish content at</span>
+            <span className="block">the perfect time for</span>
+            your audience.
+          </p>
+        </div>
+        <div className="relative bg-[#FFFFFF] col-span-1 row-span-3 rounded-md text-md pt-3 px-4 font-[550] tracking-[-1px] leading-4 overflow-hidden">
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            className="m-auto absolute"
+            src="/images/image5.webp"
+            alt="image5"
+            width={300}
+            height={50}
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <p className="mt-11">
+            Manage <span className="block">multiple</span> accounts and
+            platforms.
+          </p>
+        </div>
+        <div className="bg-[#FFCC69] col-span-1 row-span-3 rounded-md text-md pt-3 px-4 font-[550] tracking-[-1px] overflow-hidden leading-4">
+          <p className="mb-1">
+            Maintain a consistent <span className="block">posting</span>{" "}
+            schedule.
+          </p>
+          <Image
+            className="m-auto"
+            src="/images/image6.webp"
+            alt="image6"
+            width={200}
+            height={100}
+          />
+        </div>
+        <div className="bg-[#FFFFFF] col-span-1 row-span-3 rounded-md pt-3 px-4">
+          <p className="text-4xl font-[550] mb-1">{">56%"}</p>
+          <span className="text-[0.65rem] tracking-normal font-[550] flex gap-1 mb-4">
+            <span>faster</span>
+            <span>audience</span>
+            <span>growth</span>
+          </span>
+          <Image
+            className=""
+            src="/images/image7.webp"
+            alt="image7"
+            width={100}
+            height={100}
+          />
+        </div>
+        <div className="bg-[#7651DC] col-span-2 row-span-3 rounded-md flex pt-1 px-4 gap-2 justify-center items-center">
+          <Image
+            className="m-auto scale-105"
+            src="/images/image8.webp"
+            alt="image8"
+            width={125}
+            height={100}
+          />
+          <p className="text-2xl leading-6 tracking-tight font-[450] text-white pt-3 px-2">
+            Grow followers <span className="block">with non-stop</span> content.
+          </p>
+        </div>
+      </div>
+    </main>
   );
 }
